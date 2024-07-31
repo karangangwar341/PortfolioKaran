@@ -99,9 +99,10 @@ body{
 .area{
     background: #4e54c8;  
     background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-    width: 100%;
-    height:100vh;
+    width: 90vh;
+    height:200vh;
     position: flex;
+    overflow-x:hidden;
     
    
 }
@@ -111,8 +112,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 200vh;
+    overflow:hidden;
 }
 
 .circles li{
@@ -122,8 +123,8 @@ body{
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
-    bottom: -150px;
+    animation: animate 10s linear infinite;
+    bottom: -250px;
     
 }
 
@@ -140,7 +141,7 @@ body{
     width: 20px;
     height: 20px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 3s;
 }
 
 .circles li:nth-child(3){
@@ -213,10 +214,15 @@ body{
         border-radius: 0;
     }
 
-    100%{
+    700%{
         transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
+        opacity: 0.9;
         border-radius: 50%;
     }
+    100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0.5;
+      border-radius: 50%;
+  }
 
 }
