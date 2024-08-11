@@ -37,6 +37,7 @@ function App() {
                   transition={{ duration: 0.3 }}
                 >
                   <Home />
+                  
                 </motion.div>
               </AnimatePresence>
             }

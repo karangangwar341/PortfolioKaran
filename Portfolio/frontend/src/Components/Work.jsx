@@ -9,6 +9,7 @@ import Grievease2 from "../assets/Grievease2.png";
 import koinx1 from "../assets/koinx1.png";
 import koinx2 from "../assets/koinx2.png";
 import chatMitra1 from "../assets/Chatmitra1.png";
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Icons for GitHub and external link
 
 import chatMitra2 from "../assets/Chatmitra2.png";
 
@@ -21,26 +22,32 @@ import Work2 from "./UI";
 const items = [
   {
     id: 1,
+    url: "https://mzone.vercel.app/",
+    github: "https://github.com/karangangwar341/mzone", // Replace with actual GitHub URL
     title: "Mzone",
     subtitle: "Revolutionary Music App",
     description:
-      "Engineered Mzone, a groundbreaking music application, with Node.js backend, Firebase database, and React frontend. Designed sleek and intuitive UI using Figma, enhancing user engagement and satisfaction. About 60% people preferred Mzone over other players based on the visually appealing nature.",
+      "Engineered Mzone, a groundbreaking music application, with Node.js backend, Firebase database, and React frontend.",
     images: [mzone1, mzone2],
   },
   {
     id: 2,
+    url: "https://griev-ease-ten.vercel.app/",
+    github: "https://github.com/karangangwar341/grievease", // Replace with actual GitHub URL
     title: "GrievEase",
     subtitle: "Transparent Grievance Management Portal",
     description:
-      "Reduced the time to report a complaint by over 50%, now requiring less than 2 minutes to file a complaint. Crafted an intuitive and visually appealing UI using Figma, significantly enhancing user interaction and satisfaction. Played a pivotal role as Frontend Developer and UI Designer, ensuring seamless delivery of high-quality solutions.",
+      "Reduced the time to report a complaint by over 50%. Crafted an intuitive UI using Figma.",
     images: [Grievease1, Grievease2],
   },
   {
     id: 3,
+    url: "https://placeholder.com",
+    github: "https://github.com/yourusername/signlanguage", // Replace with actual GitHub URL
     title: "SignLanguageReader",
     subtitle: "Sign Language Detection",
     description:
-      "Developed a Python code that accurately detects and translates sign language alphabets using the webcam, achieving an accuracy rate of 85%. Employed OpenCV, Mediapipe Keras model, and machine learning techniques, resulting in a 20% improvement in detection accuracy compared to previous methods. Currently expanding the code’s capabilities to detect entire words and short phrases, with a projected 30% increase in translation accuracy upon completion.",
+      "Developed a Python code to detect and translate sign language alphabets.",
     images: [
       "https://via.placeholder.com/400x300.png?text=SignLanguageReader+Image1",
       "https://via.placeholder.com/400x300.png?text=SignLanguageReader+Image2",
@@ -48,26 +55,22 @@ const items = [
   },
   {
     id: 4,
-    title: "KoinX",
-    subtitle: " Prediction",
-    description:
-      "This project involved creating a machine learning model to predict stock prices. The model was trained on historical data and achieved a high level of accuracy, providing valuable insights for stock traders.",
-    images: [koinx1, koinx2],
-  },
-  {
-    id: 5,
+    url: "https://placeholder.com",
+    github: "https://github.com/yourusername/chatmitra", // Replace with actual GitHub URL
     title: "ChatMitra",
     subtitle: "AI-Powered Chatbot",
     description:
-      "Developed ChatMitra, a chatbot app that includes a noticeboard and infographics, using Django for the backend and Tailwind CSS for the frontend. Designed an engaging UI with Figma, improving user interaction and satisfaction.",
+      "Developed ChatMitra, a chatbot app with a noticeboard and infographics.",
     images: [chatMitra1, chatMitra2],
   },
   {
-    id: 6,
+    id: 5,
+    url: "https://placeholder.com",
+    github: "https://github.com/karangangwar341/moviemania", // Replace with actual GitHub URL
     title: "MovieMania",
-    subtitle: "Movie Details at your finger tips",
+    subtitle: "Movie Details at your fingertips",
     description:
-      "MovieMania is a movie web application project that involves creating components to display a list of movies and details about each movie along with a search functionality.",
+      "MovieMania is a movie web application that displays a list of movies and details.",
     images: [movie1, movie2],
   },
 ];
@@ -182,6 +185,28 @@ const Work = () => {
                   alt={item.title}
                   className="w-full h-60 object-cover rounded-lg transition-all duration-300 ease-in-out"
                 />
+                 <div className="absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                <div className="flex flex-col items-center gap-4">
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-gray-600 text-white rounded-full flex items-center gap-2 hover:bg-gray-500 transition-colors duration-300"
+                  >
+                    <FaGithub size={24} />
+                    <span className="font-medium">GitHub</span>
+                  </a>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-full flex items-center gap-2 hover:bg-blue-500 transition-colors duration-300"
+                  >
+                    <FaExternalLinkAlt size={24} />
+                    <span className="font-medium">Demo</span>
+                  </a>
+                </div>
+              </div>
                 <h5 className="text-xl font-semibold mt-2">{item.subtitle}</h5>
                 <h2 className="text-2xl font-bold mt-2">{item.title}</h2>
               </div>
